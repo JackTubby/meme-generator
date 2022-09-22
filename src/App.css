@@ -1,0 +1,17 @@
+/* HEADER */
+header {
+    display: flex;
+    background-color: rgb(67, 144, 212);
+    height: 75px;
+}
+
+.header-image {
+    height: 30px;
+    width: 30px;
+}
+
+.header--title {
+    font-size: 28 px;
+    color: rgb(255, 255, 255);
+    padding: 19px 0 0 35px;
+}
