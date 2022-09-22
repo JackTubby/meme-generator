@@ -35,6 +35,7 @@ header {
 
 .form--input {
     font-family: "Lato", sans-serif;
+    font-size: 25px;
     border-radius: 5px;
     border: 1px solid #D5D4D8;
     text-indent: 5px;
