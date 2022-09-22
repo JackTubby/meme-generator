@@ -1,4 +1,15 @@
+import {useState} from 'react'
+import memeData from './memeData.js'
+
 export default function Meme() {
+
+    // Create state
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "http://i.imgflip.com/1bij.jpg"
+    })
+
     return(
         <main>
             <div  className="form">
