@@ -1,7 +1,7 @@
 /* HEADER */
 header {
     display: flex;
-    background-color: rgb(67, 144, 212);
+    background: linear-gradient(90.41deg, #3853da 1.14%, #37abbb 100%);
     height: 75px;
 }
 
@@ -14,4 +14,38 @@ header {
     font-size: 28 px;
     color: rgb(255, 255, 255);
     padding: 19px 0 0 35px;
+}
+
+/* MEME */
+.form {
+    /* center */
+    position: absolute;
+    top: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    width: 65rem;
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.form--input {
+    font-family: "Lato", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
+.form--button {
+    grid-column: 1 / -1;
+    font-family: "Lato", sans-serif;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #3853da 1.14%, #37abbb 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
