@@ -51,12 +51,14 @@ header {
 }
 
 .meme {
-    position: relative;
-    top: 450px;
+    position: absolute;
+    top: 340px;
+    left: 37.5%;
 }
 
 .meme--image {
     max-width: 100%;
+    max-height: 590px;
     border-radius: 3px;
 }
 
