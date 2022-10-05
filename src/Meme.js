@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import memesData from './memeData.js'
 
 export default function Meme() {
@@ -11,6 +11,13 @@ export default function Meme() {
     })
     // Set state to meme data
     const [allMemes, setAllMemes] = useState(memesData)
+
+    // Create API call for meme data
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+    })
     
     // Get random meme, runs when btn is clicked
     function getMemeImage() {
