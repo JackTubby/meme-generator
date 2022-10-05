@@ -10,11 +10,11 @@ export default function Meme() {
         randomImage: "http://i.imgflip.com/1bij.jpg"
     })
     // Set state to meme data
-    const [allMemeImages, setAllMemeImages] = useState(memesData)
+    const [allMemes, setAllMemes] = useState(memesData)
     
     // Get random meme, runs when btn is clicked
     function getMemeImage() {
-        const memesArray = allMemeImages.data.memes
+        const memesArray = allMemes.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const url = memesArray[randomNumber].url
         setMeme(prevMeme => ({
