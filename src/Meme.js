@@ -10,20 +10,19 @@ export default function Meme() {
         randomImage: "http://i.imgflip.com/1bij.jpg"
     })
     // Set state to meme data
-    const [allMemes, setAllMemes] = useState(memesData)
+    const [allMemes, setAllMemes] = useState([])
 
     // Create API call for meme data
     useEffect(() => {
         fetch("https://api.imgflip.com/get_memes")
             .then(res => res.json())
             .then(data => setAllMemes(data.data.memes))
-    })
+    }, [])
     
     // Get random meme, runs when btn is clicked
     function getMemeImage() {
-        const memesArray = allMemes.data.memes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        const url = memesArray[randomNumber].url
+        const randomNumber = Math.floor(Math.random() * allMemes.length)
+        const url = allMemes[randomNumber].url
         setMeme(prevMeme => ({
             ...prevMeme,
             randomImage: url
